@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subham's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="desktop-menu">
+                <a href="#">Portfolio</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#">Portfolio</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Hey I'm Subham</h3>
+                <div class="typewriter">
+                    I'm a <span id="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <p>
+                    I'm Subham Rakshit, a passionate web developer with a knack for creating visually appealing and highly functional websites. With skills in HTML, CSS, JavaScript, and a variety of other technologies, I strive to bring ideas to life through clean, efficient code.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/Subham0822">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100092511795652">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/subham-rakshit-a96323290/">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://x.com/subharnava">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                </div>
+                <button class="hire-btn">Hire me</button>
+            </div>
+            <div class="hero-image">
+                <img src="main.png" alt="Profile" class="bounce-slow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <img src="tech-stack.png" alt="Tech Stack">
+            <div class="skills-content">
+                <h2>SKILLS</h2>
+                <div class="skills-grid">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JS</div>
+                    <div>R</div>
+                    <div>C</div>
+                    <div>Python</div>
+                    <div>MySQL</div>
+                    <div>PHP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="alumni.png" alt="Alumni Portal">
+                <h3>Alumni Portal</h3>
+                <p>An alumni portal website connects former students, facilitating networking, job opportunities, and event management for a thriving alumni community.</p>
+                <a href="http://hackheritage.sabyasachiganguli.com/">View Website →</a>
+            </div>
+            <div class="project-card">
+                <img src="notes.png" alt="Notes Master">
+                <h3>Notes Master</h3>
+                <p>Notes Master is a user-friendly platform designed to help students efficiently generate, organize, and access study materials, including summaries, flashcards, and notes.</p>
+                <a href="http://techrangers.sabyasachiganguli.com/">View Website →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <p>Get a detailed view of my professional background and skills by downloading my resume.</p>
+        <a href="resume.pdf" download class="download-btn">
+            <i data-lucide="download"></i> Download Resume
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Info</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Name:</h3>
+                <p>SUBHAM RAKSHIT</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone:</h3>
+                <a href="tel:+917980756658">
+                    <i data-lucide="phone"></i> +91 7980756658
+                </a>
+            </div>
+            <div class="contact-item">
+                <h3>Email:</h3>
+                <a href="mailto:rwik0822@gmail.com">
+                    <i data-lucide="mail"></i> rwik0822@gmail.com
+                </a>
+            </div>
+            <div class="contact-item">
+                <h3>Location:</h3>
+                <a href="https://www.google.com/maps/search/?api=1&query=Kolkata,India" target="_blank">
+                    <i data-lucide="map-pin"></i> Kolkata, India
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Subham Rakshit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
