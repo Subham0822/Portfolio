@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,21 @@
     <nav>
         <div class="nav-container">
             <img src="images/logo.png" alt="Logo" class="logo">
-            <button class="mobile-menu-btn" onclick="toggleMenu()">
-                <i data-lucide="menu"></i>
-            </button>
+            
             <div class="desktop-menu">
                 <a href="#">Portfolio</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#resume">Resume</a>
                 <a href="#contact">Contact</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon sun"></i>
+                    <i data-lucide="moon" class="theme-icon moon"></i>
+                </button>
             </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
             <a href="#">Portfolio</a>
@@ -71,49 +76,49 @@
         <div class="skills-grid">
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="file-code" style="color: #E34F26;"></i>
+                    <i data-lucide="file-code" style="color: #e34f26"></i>
                 </div>
                 <h3>HTML</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="palette" style="color: #1572B6;"></i>
+                    <i data-lucide="palette" style="color: #1572b6"></i>
                 </div>
                 <h3>CSS</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="file-json" style="color: #F7DF1E;"></i>
+                    <i data-lucide="file-json" style="color: #f7df1e"></i>
                 </div>
                 <h3>JavaScript</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="brain-circuit" style="color: #276DC3;"></i>
+                    <i data-lucide="brain-circuit" style="color: #276dc3"></i>
                 </div>
                 <h3>R</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="code" style="color: #3776AB;"></i>
+                    <i data-lucide="code" style="color: #3776ab"></i>
                 </div>
                 <h3>Python</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="file-code-2" style="color: #A8B9CC;"></i>
+                    <i data-lucide="file-code-2" style="color: #a8b9cc"></i>
                 </div>
                 <h3>C</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="database" style="color: #4479A1;"></i>
+                    <i data-lucide="database" style="color: #4479a1"></i>
                 </div>
                 <h3>MySQL</h3>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">
-                    <i data-lucide="braces" style="color: #777BB4;"></i>
+                    <i data-lucide="braces" style="color: #777bb4"></i>
                 </div>
                 <h3>PHP</h3>
             </div>
@@ -123,26 +128,90 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>PROJECTS</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="images/alumni.png" alt="Alumni Portal">
-                <h3>Alumni Portal</h3>
-                <p>An alumni portal website connects former students, facilitating networking, job opportunities, donation portal, optimised search engine and event management for a thriving alumni community.</p>
-                <a href="http://hackheritage.sabyasachiganguli.com/">View Website →</a>
+        <div class="projects-controls">
+            <div class="view-toggles">
+                <button class="view-toggle active" data-view="grid">
+                    <i data-lucide="grid"></i>
+                </button>
+                <button class="view-toggle" data-view="list">
+                    <i data-lucide="list"></i>
+                </button>
             </div>
-            <div class="project-card">
-                <img src="images/notes.png" alt="Notes Master">
-                <h3>Notes Master</h3>
-                <p>Notes Master is a user-friendly platform designed to help students efficiently generate, organize, and access study materials, including summaries, flashcards, and notes.</p>
-                <a href="http://techrangers.sabyasachiganguli.com/">View Website →</a>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="app">Apps</button>
             </div>
+        </div>
+        <div class="projects-container grid-view">
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/alumni.png" alt="Alumni Portal">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="http://hackheritage.sabyasachiganguli.com/" target="_blank" class="project-link">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Alumni Portal</h3>
+                    <p>
+                        An alumni portal website connects former students, facilitating networking, job opportunities, donation portal, optimised search engine and event management for a thriving alumni community.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/notes.png" alt="Notes Master">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="http://techrangers.sabyasachiganguli.com/" target="_blank" class="project-link">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Notes Master</h3>
+                    <p>
+                        Notes Master is a user-friendly platform designed to help students efficiently generate, organize, and access study materials, including summaries, flashcards, and notes.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
     <!-- Resume Section -->
     <section id="resume" class="resume">
         <h2>RESUME</h2>
-        <p>Get a detailed view of my professional background and skills by downloading my resume.</p>
+        <p>
+            Get a detailed view of my professional background and skills by downloading my resume.
+        </p>
         <a href="resume.pdf" download class="download-btn">
             <i data-lucide="download"></i> Download Resume
         </a>
