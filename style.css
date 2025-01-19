@@ -132,6 +132,12 @@ nav {
     align-items: center;
 }
 
+.nav-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(156, 46, 6);
+  }
+
 .desktop-menu a {
     color: var(--text-primary);
     text-decoration: none;
