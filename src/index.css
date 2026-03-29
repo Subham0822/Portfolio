@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-neon-cyan: #00f3ff;
+  --color-neon-purple: #bc13fe;
+  --color-neon-blue: #0070f3;
+  --color-lab-bg: #050507;
+  --color-lab-card: rgba(10, 10, 15, 0.8);
+  --color-lab-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-lab-bg text-gray-300 font-sans selection:bg-neon-cyan/30 selection:text-neon-cyan overflow-x-hidden;
+    background-image: 
+      linear-gradient(rgba(0, 243, 255, 0.01) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 243, 255, 0.01) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(5, 5, 7, 0.8) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-lab-card backdrop-blur-xl border border-lab-border rounded-xl shadow-2xl;
+  }
+  
+  .neon-glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.15);
+  }
+
+  .neon-border-cyan {
+    @apply border border-neon-cyan/20 hover:border-neon-cyan/50 transition-all duration-500;
+  }
+
+  .neon-border-purple {
+    @apply border border-neon-purple/20 hover:border-neon-purple/50 transition-all duration-500;
+  }
+
+  .hud-line {
+    @apply absolute bg-neon-cyan/20;
+  }
+
+  .hud-corner {
+    @apply absolute w-2 h-2 border-neon-cyan/40;
+  }
+
+  .scanline {
+    width: 100%;
+    height: 1px;
+    z-index: 50;
+    background: rgba(0, 243, 255, 0.03);
+    position: fixed;
+    top: -100%;
+    pointer-events: none;
+    animation: scanline 12s linear infinite;
+  }
+}
+
+@keyframes scanline {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 243, 255, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.4);
+}
+
+.text-gradient-cyan {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-neon-cyan;
+}
+
+.text-gradient-purple {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-neon-purple;
+}
