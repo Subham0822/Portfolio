@@ -206,7 +206,6 @@ const LiveTerminal = () => {
     "Type 'help' for available commands."
   ]);
   const [input, setInput] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -305,20 +304,9 @@ const LiveTerminal = () => {
             type="text" 
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
             placeholder="Type 'help' to begin..."
             className="bg-transparent border-none outline-none flex-grow text-neon-cyan caret-neon-cyan placeholder:text-neon-cyan/20"
           />
-          {!isFocused && input === "" && (
-            <motion.div 
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="absolute left-24 text-[10px] font-mono text-neon-cyan/30 pointer-events-none"
-            >
-              _ CLICK TO INTERACT
-            </motion.div>
-          )}
         </form>
       </div>
     </div>
