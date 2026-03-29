@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AI Systems Lab Portfolio
 
-# Run and deploy your AI Studio app
+A modern portfolio site with an AI lab theme, built with React and Vite.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/b8b29b18-ffdf-41f5-976a-054f5ba052e6
+**Prerequisites:** Node.js
 
-## Run Locally
+1. Install dependencies: `npm install`
+2. Copy `.env.example` to `.env.local` and set `GEMINI_API_KEY` if you use Gemini features
+3. Start the dev server: `npm run dev`
 
-**Prerequisites:**  Node.js
+## Build
 
+```bash
+npm run build
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Preview the production build with `npm run preview`.
