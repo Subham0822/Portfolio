@@ -309,7 +309,6 @@ const LiveTerminal = () => {
             onBlur={() => setIsFocused(false)}
             placeholder="Type 'help' to begin..."
             className="bg-transparent border-none outline-none flex-grow text-neon-cyan caret-neon-cyan placeholder:text-neon-cyan/20"
-            autoFocus
           />
           {!isFocused && input === "" && (
             <motion.div 
