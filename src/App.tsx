@@ -736,7 +736,7 @@ export default function App() {
                   Initialize Exploration <ChevronRight className="w-4 h-4" />
                 </motion.a>
                 <motion.a 
-                  href="https://drive.google.com/file/d/1xnEFlN9PSgfCn0IGgOub3bsCF_eJqTEE/view?usp=drive_link" 
+                  href="https://drive.google.com/file/d/10K-by0mWmDmyoER457zASJCnIGSRkj6X/view?usp=drive_link" 
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02, borderColor: "rgba(188, 19, 254, 0.5)", boxShadow: "0 0 20px rgba(188, 19, 254, 0.2)" }}
@@ -1065,7 +1065,7 @@ export default function App() {
               <span className="font-mono text-xs uppercase tracking-[0.3em]">Voice_Uplink</span>
             </a>
             <a 
-              href="https://drive.google.com/file/d/1xnEFlN9PSgfCn0IGgOub3bsCF_eJqTEE/view?usp=drive_link" 
+              href="https://drive.google.com/file/d/10K-by0mWmDmyoER457zASJCnIGSRkj6X/view?usp=drive_link" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 px-10 py-5 glass-panel border-neon-purple/30 hover:bg-neon-purple/5 transition-all group"
@@ -1083,7 +1083,7 @@ export default function App() {
             <span className="text-gray-800">ENCRYPTION_TYPE: AES-256-GCM</span>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-10">
-            <a href="https://drive.google.com/file/d/1xnEFlN9PSgfCn0IGgOub3bsCF_eJqTEE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-neon-purple transition-colors">RESUME_ACCESS</a>
+            <a href="https://drive.google.com/file/d/10K-by0mWmDmyoER457zASJCnIGSRkj6X/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-neon-purple transition-colors">RESUME_ACCESS</a>
             <span className="flex items-center gap-3">
               <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
               CORE_SYSTEMS: OPTIMAL
